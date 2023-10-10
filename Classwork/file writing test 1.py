@@ -1,0 +1,8 @@
+new_file = open("File writing test 1.txt","w")
+new_file.write("Hello world\n")
+new_file.write("Hello world again\n")
+new_file.write("Hello worldagain again")
+new_file.close()
+new_file = open("File writing test 1.txt","r")
+print(new_file.read())
+new_file.close()
