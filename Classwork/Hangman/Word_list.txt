@@ -1,3 +1,5 @@
+algorithm
+application
 array
 backup
 binary
@@ -18,7 +20,6 @@ development
 DNS
 document
 domain
-domain name
 download
 DVD
 email
@@ -38,9 +39,7 @@ hacker
 hardware
 inbox
 integer
-interface
 Internet
-IP address
 iteration
 Java
 keyboard
@@ -58,8 +57,6 @@ network
 node
 offline
 online
-open source
-operating system
 output
 password
 paste
@@ -78,7 +75,6 @@ router
 save
 scan
 screen
-search engine
 security
 server
 software
@@ -87,18 +83,16 @@ spyware
 storage
 syntax
 terabyte
-Trojan horse
+Trojan
 upload
 URL
-useruser interface
+user
 username
 utility
 version
-virtual memory
 virus
 website
 window
 Windows
 wireless
-World Wide Web
-worm
+Worm
