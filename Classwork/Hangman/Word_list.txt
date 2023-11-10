@@ -44,7 +44,6 @@ iteration
 Java
 keyboard
 laptop
-log out
 logic
 login
 malware

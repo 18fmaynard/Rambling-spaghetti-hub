@@ -1,22 +1,21 @@
-﻿from itertools import filterfalse
-import random
+﻿import random
 words = []
 letters_in_word = []
 game_board =[]
-def game(final_word):
-    word_formatted = final_word.replace("\n","")
-    word_length = len(word_formatted)
-    for i in range(0,word_length):
-        letters_in_word.append(word_formatted[i])
-        game_board.append("_ ")
-    print(game_board)
-    playing(word_length, game_board)
+incorect = []
+
         
-def playing(word_length, gameboard):
+
+    
+
+
+
+def playing(word_length, letters_in_word):
     lives_left = True
     lives = 6
+    print(letters_in_word)
+    print("You have ", lives, " lives remaining.")
     while lives_left == True:
-        print("You have ", lives, " lives remaining.")
         correct_input = False
         while correct_input == False:
             guess = input("What is your guess? ")
@@ -28,19 +27,31 @@ def playing(word_length, gameboard):
             else:
                 correct_input = False
         guess_formatted = guess.upper()
-        for i in range(0, word_length):
-            if guess == letters_in_word[i]:
-                game_board[i] = guess
-        print(gameboard)
-         
+        print(guess_formatted)
+        for i in range (0,len(letters_in_word)):
+            if guess_formatted == letters_in_word[i]:
+                print(letters_in_word, guess_formatted)
+                game_board[i] = letters_in_word[i]
+                print(game_board)
+
+        
+def game(final_word):
+    game_board =[]
+    word_formatted = final_word.replace("\n","")
+    word_length = len(word_formatted)
+    for i in range(0,word_length):
+        letters_in_word.append(word_formatted[i])
+        game_board.append("_ ")
+    print(game_board)
+    playing(word_length, letters_in_word)
         
         
 def select_word():
     Word_list = open("Classwork/Hangman/Word_list.txt","r")
-    for i in range(1,98):
+    for i in range(1,97):
         Word_list_number = Word_list.readline()
         words.append(Word_list_number)
-    final_word = words[random.randint(0,len(words))]
+    final_word = words[random.randint(1,len(words))]
     game(final_word)
     Word_list.close()
         
