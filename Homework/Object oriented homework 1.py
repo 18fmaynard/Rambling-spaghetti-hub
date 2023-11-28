@@ -6,21 +6,17 @@ class animals():
         self.hunger_level = hunger_level
     def set_species(self):
         self.animal_species = input("Enter the species name: ")
-        return(self.animal_species)
     def set_age(self):
         self.age = int(input("How old is the animal? "))
-        return(self.age)
     def set_hunger_level(self):
-        self.age = int(input("How hungry is the animal (1-10)? "))
-        return(self.hunger_level)
+        self.hunger_level = int(input("How hungry is the animal (1-10)? "))
     def change_threat_level(self):
-        if self.age <= 3:
+        if self.hunger_level <= 3:
             self.threat_level = "Peaceful"
-        elif 4 <= self.age <=7:
+        elif 4 <= self.hunger_level <=7:
             self.threat_level = "Narky"
         else:
             self.threat_level = "Aggressive"
-        return(self.threat_level)
     def giveinfo(self):
         print(self.animal_species)
         print("Age: ", self.age)
