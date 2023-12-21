@@ -1,4 +1,4 @@
-def print_board(tower_1, tower_2, tower_3):
+def print_board(tower_1, tower_2, tower_3, moves):
     print("Tower 1:            Tower 2:            Tower 3:            ")
     if len(tower_1) < 8:
         print("          |          ", end = "")
@@ -265,9 +265,4 @@ def print_board(tower_1, tower_2, tower_3):
     elif tower_3[0] == 1:
         print("   * * * * * * * *   ")
     print("  -----------------    -----------------    -----------------  ")
-        
-
-tower_1 = [1, 2, 3, 4, 5, 6, 7, 8]
-tower_2 = []
-tower_3 = []
-print_board(tower_1, tower_2, tower_3)
+    print("Moves: ", moves)
