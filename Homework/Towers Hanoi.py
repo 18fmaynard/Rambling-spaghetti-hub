@@ -23,6 +23,7 @@ def rings_choice():
         if valid_rings == False:
             print("Invalid")
             rings_choice()
+    print("Enter 'quit' at any time to stop.")
 
 def set_board(num_rings):
     moves = 0
@@ -39,6 +40,8 @@ def make_move(tower_1, tower_2, tower_3, moves, num_rings):
     end_tower_valid = False
     print("Which tower would you like to remove a ring from (1, 2, 3)?")
     start_tower = input()
+    if start_tower.lower() == "quit":
+        exit()
     if start_tower.isdigit():
         start_tower = int(start_tower)
         if start_tower < 1 or start_tower > 3:
@@ -68,6 +71,8 @@ def make_move(tower_1, tower_2, tower_3, moves, num_rings):
             make_move(tower_1, tower_2, tower_3, moves, num_rings)
     print("Which tower would you like to move this ring to (1, 2, 3)?")
     end_tower = input()
+    if end_tower.lower() == "quit":
+        exit()
     if end_tower.isdigit():
         end_tower = int(end_tower)
         if end_tower < 1 or end_tower > 3:
