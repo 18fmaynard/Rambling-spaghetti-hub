@@ -150,13 +150,15 @@ def change_towers(start_tower, end_tower, tower_1, tower_2, tower_3, moves, num_
             tower_3.pop()
     moves = moves + 1
     if len(tower_3) == num_rings:
-        finnish(tower_1, tower_2, tower_3, moves)
+        finnish(tower_1, tower_2, tower_3, moves, num_rings)
     print_board.print_board(tower_1, tower_2, tower_3, moves)
     
     make_move(tower_1, tower_2, tower_3, moves, num_rings)
     
-def finnish(tower_1, tower_2, tower_3, moves):
+def finnish(tower_1, tower_2, tower_3, moves, num_rings):
     print_board.print_board(tower_1, tower_2, tower_3, moves)
+    if moves == 2**num_rings - 1:
+        print("Perfect")
     print("Do you want to play again?")
     play_again = str(input())
     if play_again.lower() == "yes":
